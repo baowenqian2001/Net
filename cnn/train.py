@@ -52,7 +52,7 @@ def main():
     print('using {} images for traing and using {} images for testing'.format(train_num, test_num))
 
     epochs = 40
-    save_path = os.path.join(os.getcwd(), '../checkpoints/alex')
+    save_path = os.path.join(os.getcwd(), '../../checkpoints/alex')
     if os.path.isdir(save_path):
         print("checkpoints save in " + save_path)
     else:
