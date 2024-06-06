@@ -35,8 +35,8 @@ class ZFNet(nn.Module):
             nn.Linear(1000, num_classes),
         )
 
-def forward(self, x):
-    x = self.features(x) # 256 * [6 * 6]
-    x = torch.flatten(x, start_dim=1) # shape 1-> 合并
-    x = self.classifier(x)
-    return x
+    def forward(self, x):
+        x = self.features(x) # 256 * [6 * 6]
+        x = torch.flatten(x, start_dim=1) # shape 1-> 合并
+        x = self.classifier(x)
+        return x
