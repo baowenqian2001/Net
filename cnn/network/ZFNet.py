@@ -25,11 +25,11 @@ class ZFNet(nn.Module):
         )
         self.classifier = nn.Sequential(
             nn.Dropout(p=0.5),
-            nn.Linear(256 * 6 * 6, 4096), # 2048
+            nn.Linear(256 * 6 * 6, 2048), # 2048
             nn.ReLU(inplace=True),
 
             nn.Dropout(p=0.5),
-            nn.Linear(4096, 1000),
+            nn.Linear(2048, 1000),
             nn.ReLU(inplace=True),
 
             nn.Linear(1000, num_classes),
