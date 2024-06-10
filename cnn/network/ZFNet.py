@@ -40,3 +40,7 @@ class ZFNet(nn.Module):
         x = torch.flatten(x, start_dim=1) # shape 1-> 合并
         x = self.classifier(x)
         return x
+
+def zfnet(num_classes): 
+    model = ZFNet(num_classes=num_classes)
+    return model

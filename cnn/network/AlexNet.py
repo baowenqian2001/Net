@@ -51,7 +51,7 @@ class AlexNet(nn.Module):
                     nn.init.normal_(m.weight, 0, 0.01)
                     nn.init.constant_(m.bias, 0)
     
-    def alexnet(num_classes):
-        model = AlexNet(num_classes=num_classes)
-        return model 
+def alexnet(num_classes):
+    model = AlexNet(num_classes=num_classes)
+    return model 
     

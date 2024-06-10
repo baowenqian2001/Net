@@ -73,7 +73,7 @@ def evaluate(model, data_loader, device):
     model.eval() 
 
     # 验证集样本个数
-    num_samples = len(data_loader.datset)
+    num_samples = len(data_loader.dataset)
     # 用于存储预测正确的样本个数
     sum_num = torch.zeros(1).to(device)
 
